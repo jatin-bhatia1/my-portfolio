@@ -1,4 +1,6 @@
 import React from "react";
+import {Container, Button, Row, Col} from "reactstrap";
+import CoverImage from "../../Assets/Img/Cover_Landing_Image.jpg"
 
 class Landing extends React.Component {
     render() { 
@@ -17,7 +19,7 @@ class Landing extends React.Component {
                                 <span />
                                 <span />
                         </div>
-                        {/* <div className="separator separator-bottom separator-skew">
+                        <div className="separator separator-bottom separator-skew">
                             <svg
                                 viewBox="0 0 2560 100"
                             >
@@ -26,7 +28,22 @@ class Landing extends React.Component {
                                     points="2560 0 2560 100 0 100"
                                 />
                             </svg>
-                        </div>  */}
+                        </div>
+                        <Container className="">
+                            <div className="col px-0">
+                                <Row>
+                                    <Col lg="5">
+                                        <h1 className="text-white">Jatin Bhatia</h1>
+                                        <p className="lead text-white">
+                                            Full-stack Developer, AI Aspirant, Big-Data Aspirant                                        
+                                        </p>
+                                    </Col>
+                                    <Col lg="7">
+                                        <img src={CoverImage}/>
+                                    </Col>
+                                </Row>                                
+                            </div>
+                        </Container> 
                     </section>
                 </div>
             </main>
