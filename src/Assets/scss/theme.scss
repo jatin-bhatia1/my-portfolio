@@ -1,0 +1,11 @@
+
+//@import "../../../node_modules/bootstrap/scss/functions";
+
+// Bootstrap Core
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//Customized CSS
+@import "./theme/variables.scss";
+@import "./theme/functions.scss";
+@import "./theme/design.scss";
+
