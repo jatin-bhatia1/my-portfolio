@@ -1,6 +1,9 @@
 
 //@import "../../../node_modules/bootstrap/scss/functions";
 
+// Bootstrap Functions
+@import "../../../node_modules/bootstrap/scss/functions";
+
 // Bootstrap Core
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -9,4 +12,5 @@
 @import "./theme/functions.scss";
 @import "./theme/design.scss";
 
-
+//For Icons
+@import '../../../node_modules/font-awesome/css/font-awesome.min.css';

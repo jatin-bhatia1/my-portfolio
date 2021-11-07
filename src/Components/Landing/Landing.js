@@ -1,6 +1,7 @@
 import React from "react";
 import {Container, Button, Row, Col} from "reactstrap";
-import CoverImage from "../../Assets/Img/Cover_Landing_Image.jpg"
+import CoverImage from "../../Assets/Img/Coding.jpg"
+import Typewriter from 'typewriter-effect';
 
 class Landing extends React.Component {
     render() { 
@@ -29,17 +30,46 @@ class Landing extends React.Component {
                                 />
                             </svg>
                         </div>
-                        <Container className="">
+                        <Container className="hero">
                             <div className="col px-0">
-                                <Row>
+                                <Row className="align-items-center">
                                     <Col lg="5">
-                                        <h1 className="text-white">Jatin Bhatia</h1>
-                                        <p className="lead text-white">
-                                            Full-stack Developer, AI Aspirant, Big-Data Aspirant                                        
-                                        </p>
+                                        <div className="hero-content">
+                                            <div className="hero-text">
+                                                <p className="text-white">I'm</p>
+                                                <h1 className="text-white">Jatin Bhatia</h1>
+                                                <h2 className="lead text-white">
+                                                    <Typewriter
+                                                        options={{
+                                                            autoStart: true,
+                                                            loop: true,
+                                                            delay: 200
+                                                        }}
+                                                        onInit={(typewriter) => {
+                                                            typewriter.typeString('Full-stack Developer')
+                                                            .deleteAll()
+                                                            typewriter.typeString('AI Aspirant')
+                                                            .deleteAll()
+                                                            typewriter.typeString('Big-Data Aspirant')
+                                                            .start();
+                                                        }}
+                                                    />                                       
+                                                </h2> 
+                                            </div>
+                                            <div className="hero-btn">
+                                                <Button className="btn">
+                                                    <i className="fa fa-linkedin"></i>LINKEDIN
+                                                </Button>
+                                                <Button className="btn">
+                                                    <span className="btn-inner--icon mr-5">
+                                                        <i className="fa fa-github"></i>
+                                                    </span>GITHUB
+                                                </Button>
+                                            </div>
+                                        </div>                                                                               
                                     </Col>
                                     <Col lg="7">
-                                        <img src={CoverImage}/>
+                                        <img className="coverImage" src={CoverImage} alt="Image"/>
                                     </Col>
                                 </Row>                                
                             </div>
