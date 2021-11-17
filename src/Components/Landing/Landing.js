@@ -1,9 +1,7 @@
 import React from "react";
-import {Container, Row, Col} from "reactstrap";
+import {Container, Button, Row, Col} from "reactstrap";
 import CoverImage from "../../Assets/Img/Coding.jpg"
 import Typewriter from 'typewriter-effect';
-import Button from "@material-ui/core/Button";
-import Delete from "@material-ui/icons/Delete";
 
 class Landing extends React.Component {
     render() { 
@@ -32,52 +30,48 @@ class Landing extends React.Component {
                                 />
                             </svg>
                         </div>
-                        <Container>
-                            <div className="hero-wrapper">
+                        <Container className="hero">
+                            <div className="col px-0">
                                 <Row className="align-items-center">
-                                        <Col lg="5">
-                                            <div className="hero-content">
-                                                <div className="hero-text">
-                                                    <p className="text-white">Hello, I'm</p>
-                                                    <h1 className="text-white">Jatin Bhatia</h1>
-                                                    <h2 className="lead">
-                                                        <Typewriter
-                                                            options={{
-                                                                autoStart: true,
-                                                                loop: true,
-                                                                delay: 200
-                                                            }}
-                                                            onInit={(typewriter) => {
-                                                                typewriter.typeString('Full-stack Developer')
-                                                                .pause(10)
-                                                                .deleteAll()
-                                                                typewriter.typeString('AI Enthusiast')
-                                                                .deleteAll()
-                                                                typewriter.typeString('Data-Science Aspirant')
-                                                                .start();
-                                                            }}
-                                                        />                                       
-                                                    </h2> 
-                                                </div>
-                                                <div className="hero-btn">
-                                                    <Button className="btn"
-                                                        startIcon={<Delete />}
-                                                        endIcon={<Delete />}
-                                                    >
-                                                        LINKEDIN
-                                                    </Button>
-                                                    <Button className="btn">
-                                                        <span className="btn-inner--icon mr-5">
-                                                            <i className="fa fa-github"></i>
-                                                        </span>GITHUB
-                                                    </Button>
-                                                </div>
-                                            </div>                                                                               
-                                        </Col>
-                                        <Col lg="7">
-                                            <img className="coverImage" src={CoverImage} alt="Image"/>
-                                        </Col>
-                                    </Row> 
+                                    <Col lg="5">
+                                        <div className="hero-content">
+                                            <div className="hero-text">
+                                                <p className="text-white">I'm</p>
+                                                <h1 className="text-white">Jatin Bhatia</h1>
+                                                <h2 className="lead text-white">
+                                                    <Typewriter
+                                                        options={{
+                                                            autoStart: true,
+                                                            loop: true,
+                                                            delay: 200
+                                                        }}
+                                                        onInit={(typewriter) => {
+                                                            typewriter.typeString('Full-stack Developer')
+                                                            .deleteAll()
+                                                            typewriter.typeString('AI Aspirant')
+                                                            .deleteAll()
+                                                            typewriter.typeString('Big-Data Aspirant')
+                                                            .start();
+                                                        }}
+                                                    />                                       
+                                                </h2> 
+                                            </div>
+                                            <div className="hero-btn">
+                                                <Button className="btn">
+                                                    <i className="fa fa-linkedin"></i>LINKEDIN
+                                                </Button>
+                                                <Button className="btn">
+                                                    <span className="btn-inner--icon mr-5">
+                                                        <i className="fa fa-github"></i>
+                                                    </span>GITHUB
+                                                </Button>
+                                            </div>
+                                        </div>                                                                               
+                                    </Col>
+                                    <Col lg="7">
+                                        <img className="coverImage" src={CoverImage} alt="Image"/>
+                                    </Col>
+                                </Row>                                
                             </div>
                         </Container> 
                     </section>
