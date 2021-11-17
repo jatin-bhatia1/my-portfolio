@@ -1,51 +1,40 @@
 import React from "react";
-import { Component } from "react";
 import {Container, Button, Row, Col} from "reactstrap";
 import LinearProgressWithLabel from "../Shared/ProgressBar";
-import aboutImage from "../../Assets/Img/Cover_Landing_Image.jpg";
 import {Card,
-        CardContent, 
-        CardActionArea, 
-        Typography,
-        List,
-        ListItem,
-        ListItemText,
-        ListItemAvatar,
-        Avatar } from '@material-ui/core';
-        
-    class About extends React.Component {
+    CardContent, 
+    CardActionArea, 
+    CardMedia,
+    Typography,
+    List,
+    ListItem,
+    ListItemText,
+    ListItemAvatar,
+    Avatar } from '@material-ui/core';
 
+class Skills extends React.Component {
     render() { 
         return <div>
             <main ref="main">
                 <div className="position-relative">
                     <section className="section section-lg">
-                        <Container className="about">
-                            <Row className="align-items-center">
-                                <Col className="col-lg-6">
-                                    <div className="about-img">
-                                        <img src={aboutImage} alt="Image"/>
-                                    </div>
-                                </Col>
-                                <Col className="col-lg-6">
-                                    <div className="about-content">
-                                        <div class="section-header text-left">
-                                            <h1>About</h1>
-                                        </div>
-                                        <div className="about-text">
-                                            <p>My name is Jatin Bhatia, based In Lyon, France. I'm a Full-stack developer.</p>
-                                        </div>
-                                    </div>
-
-                                    {/* Core Language Card */}
-                                    <Card sx={{ maxWidth: 345 }}>
+                        <Container className="skills">
+                            <Row className="justify-content-center row-grid">
+                                <Col lg="4">
+                                    <Card>
                                         <CardActionArea>
+                                            <CardMedia
+                                            component="img"
+                                            alt="Backend Icon"
+                                            height="40"
+                                            image="../../Assets/Img/Backend_Icon.png"
+                                            title="Backend Icon">                                                
+                                            </CardMedia>
                                             <CardContent>
                                                 <Typography gutterBottom variant="h5" component="div">
                                                     Backend Languages
                                                 </Typography>
-                                                <Typography variant="body2" color="text.secondary">
-                                                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                                                <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                                                         <ListItem>
                                                             <ListItemAvatar>
                                                                 <Avatar>
@@ -89,55 +78,23 @@ import {Card,
                                                             <ListItemText primary="Python" secondary={<LinearProgressWithLabel value={40} />} />
                                                         </ListItem>
                                                     </List>
-                                                </Typography>
                                             </CardContent>
                                         </CardActionArea>
                                     </Card>
-
-                                    {/* Core Language Card */}
-                                    <Card sx={{ maxWidth: 345 }}>
-                                        <CardActionArea>
-                                            <CardContent>
-                                                <Typography gutterBottom variant="h5" component="div">
-                                                    Frontend Framework
-                                                </Typography>
-                                                <Typography variant="body2" color="text.secondary">
-                                                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                                                        <ListItem>
-                                                            <ListItemAvatar>
-                                                                <Avatar>
-                                                                    <svg viewBox="0 0 128 128">
-                                                                        <path fill="#FF8000" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path>
-                                                                        <path fill="#66CC00" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path>
-                                                                        <path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h4.2v4.7h-5.1l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8l-.9 4.3z"></path>
-                                                                    </svg>
-                                                                </Avatar>                                                                
-                                                            </ListItemAvatar>
-                                                            <ListItemText primary="Asp.Net" secondary={<LinearProgressWithLabel value={70} />} />
-                                                        </ListItem>
-                                                        <ListItem>
-                                                            <ListItemAvatar>
-                                                                <Avatar>
-                                                                <svg viewBox="0 0 128 128">
-                                                                    <path fill="#D38F50" d="M112.771 30.334L68.674 4.729c-2.781-1.584-6.402-1.584-9.205 0L14.901 30.334C12.031 31.985 10 35.088 10 38.407v51.142c0 3.319 2.084 6.423 4.954 8.083l11.775 6.688c5.628 2.772 7.617 2.772 10.178 2.772 8.333 0 13.093-5.039 13.093-13.828v-50.49c0-.713-.371-1.774-1.071-1.774h-5.623C42.594 41 41 42.061 41 42.773v50.49c0 3.896-3.524 7.773-10.11 4.48L18.723 90.73c-.424-.23-.723-.693-.723-1.181V38.407c0-.482.555-.966.982-1.213l44.424-25.561c.415-.235 1.025-.235 1.439 0l43.882 25.555c.42.253.272.722.272 1.219v51.142c0 .488.183.963-.232 1.198l-44.086 25.576c-.378.227-.847.227-1.261 0l-11.307-6.749c-.341-.198-.746-.269-1.073-.086-3.146 1.783-3.726 2.02-6.677 3.043-.726.253-1.797.692.41 1.929l14.798 8.754a9.294 9.294 0 004.647 1.246c1.642 0 3.25-.426 4.667-1.246l43.885-25.582c2.87-1.672 4.23-4.764 4.23-8.083V38.407c0-3.319-1.36-6.414-4.229-8.073zM77.91 81.445c-11.726 0-14.309-3.235-15.17-9.066-.1-.628-.633-1.379-1.272-1.379h-5.731c-.709 0-1.279.86-1.279 1.566 0 7.466 4.059 16.512 23.453 16.512 14.039 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.105 0 12.461 1.954 13.842 8.091.118.577.645.991 1.24.991h5.754c.354 0 .692-.143.94-.396.24-.272.367-.613.335-.979-.891-10.568-7.912-15.493-22.112-15.493-12.631 0-20.166 5.334-20.166 14.275 0 9.698 7.497 12.378 19.622 13.577 14.505 1.422 15.633 3.542 15.633 6.395 0 4.955-3.978 7.066-13.309 7.066z"></path>
-                                                                </svg>
-                                                                </Avatar>
-                                                            </ListItemAvatar>
-                                                            <ListItemText primary="ReactJS" secondary={<LinearProgressWithLabel value={60} />} />
-                                                        </ListItem>
-                                                    </List>
-                                                </Typography>
-                                            </CardContent>
-                                        </CardActionArea>
-                                    </Card>
-                                </Col>                                
+                                </Col>
+                                <Col lg="4">
+                                    
+                                </Col>
+                                <Col lg="4">
+                                    
+                                </Col>
                             </Row>
-                        </Container>                        
+                        </Container>
                     </section>
-                </div>                
+                </div>
             </main>
-        </div>
+        </div>;
     }
 }
  
-export default About;
+export default Skills;

@@ -320,10 +320,16 @@
 /********** Hero CSS ***********/
 /*******************************/
 
-.hero{
+.hero-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+
     .hero-text{
         p {
-            color: #ffffff;
+            font-family: SF Pro Display,sans-serif;
             font-size: 25px;
             font-weight: 600;
             margin-bottom: 15px;
@@ -331,7 +337,8 @@
         
         h1{
             color: #ffffff;
-            font-size: 60px;
+            font-family: SF Pro Display,sans-serif;
+            font-size: 5rem;
             font-weight: 700;
             letter-spacing: 3px;
             margin-bottom: 15px;
@@ -339,10 +346,14 @@
 
         h2{
             display: inline-block;
+            font-family: SF Pro Display,sans-serif;
             margin: 0;
-            height: 35px;
-            font-size: 35px;
+            line-height: 2.1rem;
+            font-size: 1.8rem;
             font-weight: 600;
+            font-style: normal;
+            color: #FF9472;
+            text-transform: inherit;
         }
     }
 
@@ -376,7 +387,7 @@
 	position: relative;
 	margin: 15px 0;
 	height: 30px;
-	width: 600px;
+	width: 500px;
 }
 
 .progress-done {
@@ -420,4 +431,9 @@
     .about-text p {
         font-size: 16px;
     }
+}
+
+//Dev Icons
+.devicon-csharp-plain{
+    fill: #FF9472;
 }
