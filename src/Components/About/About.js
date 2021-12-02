@@ -1,6 +1,6 @@
 import React from "react";
-import { Component } from "react";
-import {Container, Button, Row, Col} from "reactstrap";
+// import { Component } from "react";
+import {Container, Row, Col} from "reactstrap";
 import LinearProgressWithLabel from "../Shared/ProgressBar";
 import aboutImage from "../../Assets/Img/Cover_Landing_Image.jpg";
 import {Card,
