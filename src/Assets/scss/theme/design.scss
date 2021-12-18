@@ -426,7 +426,7 @@
         padding: 0 60px;
     }
     .section-header {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .about-text p {
         font-size: 16px;
@@ -521,6 +521,7 @@
 
 		// that's all the pen about
 		clip-path: circle(100%);
+        z-index: 99;
 	}
 	
 	.nav-tgl > span {

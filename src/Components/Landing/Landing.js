@@ -1,5 +1,4 @@
 import React from "react";
-import {Container, Row, Col} from "reactstrap";
 import CoverImage from "../../Assets/Img/Coding.jpg"
 import Typewriter from 'typewriter-effect';
 import Button from "@material-ui/core/Button";
@@ -32,10 +31,10 @@ class Landing extends React.Component {
                                 />
                             </svg>
                         </div>
-                        <Container>
+                        <div className="container">
                             <div className="hero-wrapper">
-                                <Row className="align-items-center">
-                                        <Col lg="5">
+                                <div className="row align-items-center">
+                                        <div className="col-md-5">
                                             <div className="hero-content">
                                                 <div className="hero-text">
                                                     <p className="text-white">Hello, I'm</p>
@@ -73,13 +72,13 @@ class Landing extends React.Component {
                                                     </Button>
                                                 </div>
                                             </div>                                                                               
-                                        </Col>
-                                        <Col lg="7">
-                                            <img className="coverImage" src={CoverImage} alt="Image"/>
-                                        </Col>
-                                    </Row> 
+                                        </div>
+                                        <div className="col-md-7">
+                                            <img className="coverImage" src={CoverImage} alt=""/>
+                                        </div>
+                                    </div> 
                             </div>
-                        </Container> 
+                        </div> 
                     </section>
                 </div>
             </main>

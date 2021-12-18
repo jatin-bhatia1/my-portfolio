@@ -1,100 +1,161 @@
 import React from "react";
-import {Container, Row, Col} from "reactstrap";
 import LinearProgressWithLabel from "../Shared/ProgressBar";
-import {Card,
-    CardContent, 
-    CardActionArea, 
+import {
+    Card,
+    CardContent,
+    CardActionArea,
     CardMedia,
     Typography,
     List,
     ListItem,
     ListItemText,
     ListItemAvatar,
-    Avatar } from '@material-ui/core';
+    Avatar
+} from '@material-ui/core';
 
 class Skills extends React.Component {
-    render() { 
+    render() {
         return <div>
-            <main ref="main">
-                <div className="position-relative">
-                    <section className="section section-lg">
-                        <Container className="skills">
-                            <Row className="justify-content-center row-grid">
-                                <Col lg="4">
+            <section className="skills">
+                        <div className="container">
+                            <div className="row justify-content-center row-grid">
+                                <div className="col-md-4">
                                     <Card>
                                         <CardActionArea>
                                             <CardMedia
-                                            component="img"
-                                            alt="Backend Icon"
-                                            height="40"
-                                            image="../../Assets/Img/Backend_Icon.png"
-                                            title="Backend Icon">                                                
+                                                component="img"
+                                                alt="Backend Icon"
+                                                height="40"
+                                                image="../../Assets/Img/Backend_Icon.png"
+                                                title="Backend Icon">
                                             </CardMedia>
                                             <CardContent>
                                                 <Typography gutterBottom variant="h5" component="div">
                                                     Backend Languages
                                                 </Typography>
                                                 <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                                                        <ListItem>
-                                                            <ListItemAvatar>
-                                                                <Avatar>
-                                                                    <svg viewBox="0 0 128 128">
-                                                                        <path fill="#FF8000" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path>
-                                                                        <path fill="#66CC00" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path>
-                                                                        <path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h4.2v4.7h-5.1l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8l-.9 4.3z"></path>
-                                                                    </svg>
-                                                                </Avatar>                                                                
-                                                            </ListItemAvatar>
-                                                            <ListItemText primary="Csharp" secondary={<LinearProgressWithLabel value={70} />} />
-                                                        </ListItem>
-                                                        <ListItem>
-                                                            <ListItemAvatar>
-                                                                <Avatar>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <Avatar>
+                                                                <svg viewBox="0 0 128 128">
+                                                                    <path fill="#FF8000" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path>
+                                                                    <path fill="#66CC00" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path>
+                                                                    <path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h4.2v4.7h-5.1l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8l-.9 4.3z"></path>
+                                                                </svg>
+                                                            </Avatar>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary="Csharp" secondary={<LinearProgressWithLabel value={70} />} />
+                                                    </ListItem>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <Avatar>
                                                                 <svg viewBox="0 0 128 128">
                                                                     <path fill="#D38F50" d="M112.771 30.334L68.674 4.729c-2.781-1.584-6.402-1.584-9.205 0L14.901 30.334C12.031 31.985 10 35.088 10 38.407v51.142c0 3.319 2.084 6.423 4.954 8.083l11.775 6.688c5.628 2.772 7.617 2.772 10.178 2.772 8.333 0 13.093-5.039 13.093-13.828v-50.49c0-.713-.371-1.774-1.071-1.774h-5.623C42.594 41 41 42.061 41 42.773v50.49c0 3.896-3.524 7.773-10.11 4.48L18.723 90.73c-.424-.23-.723-.693-.723-1.181V38.407c0-.482.555-.966.982-1.213l44.424-25.561c.415-.235 1.025-.235 1.439 0l43.882 25.555c.42.253.272.722.272 1.219v51.142c0 .488.183.963-.232 1.198l-44.086 25.576c-.378.227-.847.227-1.261 0l-11.307-6.749c-.341-.198-.746-.269-1.073-.086-3.146 1.783-3.726 2.02-6.677 3.043-.726.253-1.797.692.41 1.929l14.798 8.754a9.294 9.294 0 004.647 1.246c1.642 0 3.25-.426 4.667-1.246l43.885-25.582c2.87-1.672 4.23-4.764 4.23-8.083V38.407c0-3.319-1.36-6.414-4.229-8.073zM77.91 81.445c-11.726 0-14.309-3.235-15.17-9.066-.1-.628-.633-1.379-1.272-1.379h-5.731c-.709 0-1.279.86-1.279 1.566 0 7.466 4.059 16.512 23.453 16.512 14.039 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.105 0 12.461 1.954 13.842 8.091.118.577.645.991 1.24.991h5.754c.354 0 .692-.143.94-.396.24-.272.367-.613.335-.979-.891-10.568-7.912-15.493-22.112-15.493-12.631 0-20.166 5.334-20.166 14.275 0 9.698 7.497 12.378 19.622 13.577 14.505 1.422 15.633 3.542 15.633 6.395 0 4.955-3.978 7.066-13.309 7.066z"></path>
                                                                 </svg>
-                                                                </Avatar>
-                                                            </ListItemAvatar>
-                                                            <ListItemText primary="NodeJS" secondary={<LinearProgressWithLabel value={60} />} />
-                                                        </ListItem>
-                                                        <ListItem>
-                                                            <ListItemAvatar>
-                                                                <Avatar>
-                                                                <svg viewBox="0 0 128 128">
-                                                                    <path fill="#F0DB4F" d="M2 1v125h125V1H2zm66.119 106.513c-1.845 3.749-5.367 6.212-9.448 7.401-6.271 1.44-12.269.619-16.731-2.059-2.986-1.832-5.318-4.652-6.901-7.901l9.52-5.83c.083.035.333.487.667 1.071 1.214 2.034 2.261 3.474 4.319 4.485 2.022.69 6.461 1.131 8.175-2.427 1.047-1.81.714-7.628.714-14.065C58.433 78.073 58.48 68 58.48 58h11.709c0 11 .06 21.418 0 32.152.025 6.58.596 12.446-2.07 17.361zm48.574-3.308c-4.07 13.922-26.762 14.374-35.83 5.176-1.916-2.165-3.117-3.296-4.26-5.795 4.819-2.772 4.819-2.772 9.508-5.485 2.547 3.915 4.902 6.068 9.139 6.949 5.748.702 11.531-1.273 10.234-7.378-1.333-4.986-11.77-6.199-18.873-11.531-7.211-4.843-8.901-16.611-2.975-23.335 1.975-2.487 5.343-4.343 8.877-5.235l3.688-.477c7.081-.143 11.507 1.727 14.756 5.355.904.916 1.642 1.904 3.022 4.045-3.772 2.404-3.76 2.381-9.163 5.879-1.154-2.486-3.069-4.046-5.093-4.724-3.142-.952-7.104.083-7.926 3.403-.285 1.023-.226 1.975.227 3.665 1.273 2.903 5.545 4.165 9.377 5.926 11.031 4.474 14.756 9.271 15.672 14.981.882 4.916-.213 8.105-.38 8.581z"></path>
-                                                                </svg>
-                                                                </Avatar>
-                                                            </ListItemAvatar>
-                                                            <ListItemText primary="Javascript" secondary={<LinearProgressWithLabel value={50} />} />
-                                                        </ListItem>
-                                                        <ListItem>
-                                                            <ListItemAvatar>
-                                                                <Avatar>
+                                                            </Avatar>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary="NodeJS" secondary={<LinearProgressWithLabel value={60} />} />
+                                                    </ListItem>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <Avatar>
                                                                 <svg viewBox="0 0 128 128">
                                                                     <linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"></stop><stop offset="1" stop-color="#306998"></stop></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"></stop><stop offset="1" stop-color="#FFE873"></stop></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"></path><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"></path><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop><stop offset="1" stop-color="#7F7F7F" stop-opacity="0"></stop></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z"></path>
                                                                 </svg>
-                                                                </Avatar>
-                                                            </ListItemAvatar>
-                                                            <ListItemText primary="Python" secondary={<LinearProgressWithLabel value={40} />} />
-                                                        </ListItem>
-                                                    </List>
+                                                            </Avatar>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary="Python" secondary={<LinearProgressWithLabel value={40} />} />
+                                                    </ListItem>
+                                                </List>
                                             </CardContent>
                                         </CardActionArea>
                                     </Card>
-                                </Col>
-                                <Col lg="4">
-                                    
-                                </Col>
-                                <Col lg="4">
-                                    
-                                </Col>
-                            </Row>
-                        </Container>
+                                </div>
+                                <div className="col-md-4">
+                                    <Card>
+                                        <CardActionArea>
+                                            <CardMedia
+                                                component="img"
+                                                alt="Backend Icon"
+                                                height="40"
+                                                image="../../Assets/Img/Backend_Icon.png"
+                                                title="Backend Icon">
+                                            </CardMedia>
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="div">
+                                                    Framework & Libraries
+                                                </Typography>
+                                                <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <Avatar>
+                                                                <svg viewBox="0 0 128 128">
+                                                                    <linearGradient id="dot-net-original-a" gradientUnits="userSpaceOnUse" x1="61.631" y1="563.347" x2="62.022" y2="563.347" gradientTransform="matrix(0 149.735 149.735 0 -84296.266 -9188.014)"><stop offset="0" stop-color="#0994DC"></stop><stop offset=".35" stop-color="#66CEF5"></stop><stop offset=".35" stop-color="#66CEF5"></stop><stop offset=".846" stop-color="#127BCA"></stop><stop offset=".846" stop-color="#127BCA"></stop><stop offset="1" stop-color="#127BCA"></stop></linearGradient><path fill="url(#dot-net-original-a)" d="M45.288 49.559c4.417 13.507 6.09 37.601 19.006 37.601.982 0 1.977-.096 2.974-.286-11.74-2.737-13.132-26.569-20.297-38.912a61.601 61.601 0 00-1.683 1.597"></path><linearGradient id="dot-net-original-b" gradientUnits="userSpaceOnUse" x1="61.705" y1="563.34" x2="62.095" y2="563.34" gradientTransform="matrix(0 153.551 153.551 0 -86442.719 -9435.969)"><stop offset="0" stop-color="#0E76BC"></stop><stop offset=".36" stop-color="#36AEE8"></stop><stop offset=".36" stop-color="#36AEE8"></stop><stop offset=".846" stop-color="#00ADEF"></stop><stop offset=".846" stop-color="#00ADEF"></stop><stop offset="1" stop-color="#00ADEF"></stop></linearGradient><path fill="url(#dot-net-original-b)" d="M46.971 47.962c7.165 12.342 8.557 36.174 20.297 38.912a18.621 18.621 0 002.773-.749C59.502 80.961 56.59 57.819 48.453 46.678c-.492.41-.987.839-1.482 1.284"></path><path fill="#14559A" d="M57.294 40.623c-.98 0-1.977.096-2.977.286-2.612.493-5.268 1.618-7.944 3.321.73.722 1.427 1.547 2.081 2.448 2.723-2.259 5.427-3.928 8.12-4.932a18.177 18.177 0 013.029-.842 9.393 9.393 0 00-2.309-.281"></path><linearGradient id="dot-net-original-c" gradientUnits="userSpaceOnUse" x1="67.486" y1="564.985" x2="67.876" y2="564.985" gradientTransform="matrix(0 -122.178 -122.178 0 69099.289 8331.043)"><stop offset="0" stop-color="#1C63B7"></stop><stop offset=".5" stop-color="#33BDF2"></stop><stop offset="1" stop-color="#33BDF2" stop-opacity=".42"></stop></linearGradient><path fill="url(#dot-net-original-c)" d="M78.268 81.366a47.16 47.16 0 003.24-2.84c-4.488-13.443-6.095-37.883-19.101-37.883-.93 0-1.868.087-2.804.26C71.45 43.85 72.968 69.625 78.268 81.366"></path><path fill="#3092C4" d="M59.604 40.904a9.355 9.355 0 00-2.311-.282l5.114.019c-.929 0-1.867.086-2.803.263"></path><path fill="#1969BC" d="M78.04 84.221a19.441 19.441 0 01-1.466-1.584c-2.188 1.549-4.368 2.724-6.533 3.489.771.376 1.578.656 2.436.829.664.136 1.353.206 2.075.206 2.431 0 4.353-.288 5.987-1.072-.9-.488-1.726-1.118-2.499-1.868"></path><linearGradient id="dot-net-original-d" gradientUnits="userSpaceOnUse" x1="61.852" y1="563.281" x2="62.243" y2="563.281" gradientTransform="matrix(0 159.425 159.425 0 -89733.742 -9828.116)"><stop offset="0" stop-color="#166AB8"></stop><stop offset=".4" stop-color="#36AEE8"></stop><stop offset=".4" stop-color="#36AEE8"></stop><stop offset=".846" stop-color="#0798DD"></stop><stop offset=".846" stop-color="#0798DD"></stop><stop offset="1" stop-color="#0798DD"></stop></linearGradient><path fill="url(#dot-net-original-d)" d="M56.573 41.748c10.611 5.55 11.534 30.684 20.001 40.889.568-.4 1.13-.824 1.691-1.271-5.3-11.741-6.815-37.519-18.66-40.463-1.011.189-2.02.469-3.032.845"></path><linearGradient id="dot-net-original-e" gradientUnits="userSpaceOnUse" x1="61.975" y1="563.367" x2="62.366" y2="563.367" gradientTransform="matrix(0 169.528 169.528 0 -95443.742 -10473.372)"><stop offset="0" stop-color="#124379"></stop><stop offset=".39" stop-color="#1487CB"></stop><stop offset=".39" stop-color="#1487CB"></stop><stop offset=".78" stop-color="#165197"></stop><stop offset=".78" stop-color="#165197"></stop><stop offset="1" stop-color="#165197"></stop></linearGradient><path fill="url(#dot-net-original-e)" d="M48.453 46.678c8.137 11.141 11.049 34.284 21.588 39.448 2.166-.765 4.346-1.939 6.533-3.489-8.467-10.205-9.39-35.338-20.001-40.889-2.693 1.002-5.397 2.671-8.12 4.93"></path><linearGradient id="dot-net-original-f" gradientUnits="userSpaceOnUse" x1="1006.454" y1="-1412.08" x2="1008.771" y2="-1412.08" gradientTransform="matrix(4.038 0 0 -4.038 -4028.633 -5649.283)"><stop offset="0" stop-color="#33BDF2" stop-opacity=".698"></stop><stop offset="1" stop-color="#1DACD8"></stop></linearGradient><path fill="url(#dot-net-original-f)" d="M40.083 49.234c-1.275 2.883-2.578 6.674-4.152 11.621 3.131-4.413 6.253-8.214 9.357-11.295a33.873 33.873 0 00-1.382-3.606 46.113 46.113 0 00-3.823 3.28"></path><path fill="#2B74B1" d="M45.037 45.121c-.374.268-.751.542-1.13.832.495 1.08.953 2.292 1.38 3.607a66.502 66.502 0 011.684-1.597 22.346 22.346 0 00-1.934-2.842"></path><path fill="#125A9E" d="M46.373 44.229c-.445.282-.888.58-1.337.891.695.855 1.333 1.81 1.936 2.844.495-.448.989-.879 1.482-1.287-.654-.9-1.35-1.726-2.081-2.448"></path><linearGradient id="dot-net-original-g" gradientUnits="userSpaceOnUse" x1="67.564" y1="565.48" x2="67.954" y2="565.48" gradientTransform="matrix(0 -119.018 -119.018 0 67408.578 8125.832)"><stop offset="0" stop-color="#136AB4"></stop><stop offset=".6" stop-color="#59CAF5" stop-opacity=".549"></stop><stop offset="1" stop-color="#59CAF5" stop-opacity=".235"></stop></linearGradient><path fill="url(#dot-net-original-g)" d="M118.751 39.594c-6.001 23.144-18.536 41.734-29.044 46.42h-.021l-.567.243-.069.027-.161.062-.072.03-.263.093-.108.038-.131.043-.126.044-.112.038-.224.068-.096.025-.151.041-.103.028-.165.043-.201.044c.475.175.97.264 1.503.264 9.965 0 20.013-17.858 36.638-47.556h-6.528l.001.005z"></path><linearGradient id="dot-net-original-h" gradientUnits="userSpaceOnUse" x1="998.231" y1="-1414.829" x2="1006.826" y2="-1414.829" gradientTransform="matrix(4.038 0 0 -4.038 -4028.633 -5649.283)"><stop offset="0" stop-color="#05A1E6" stop-opacity=".247"></stop><stop offset="1" stop-color="#05A1E6"></stop></linearGradient><path fill="url(#dot-net-original-h)" d="M33.766 41.563l.019-.016.023-.015h.013l.161-.062.032-.016.042-.017.173-.062h.009l.383-.134.057-.015.164-.049.075-.024.165-.049.063-.017.548-.142.075-.017.16-.031.078-.024.161-.03h.038l.333-.062h.066l.154-.027.087-.015.147-.022.081-.016.358-.032a11.467 11.467 0 00-1.061-.054c-11.223 0-26.685 20.822-33.649 47.788h1.343a390.312 390.312 0 006.062-11.266c4.879-19.1 14.814-32.126 23.64-35.577"></path><path fill="#0D82CA" d="M40.083 49.234a46.488 46.488 0 013.823-3.281 17.961 17.961 0 00-.911-1.761c-1.026 1.246-1.964 2.89-2.912 5.042"></path><path fill="#0D82CA" d="M41.005 41.72c.733.614 1.39 1.46 1.99 2.473.189-.232.381-.447.58-.649a11.263 11.263 0 00-2.712-1.897l.12.057.022.016"></path><linearGradient id="dot-net-original-i" gradientUnits="userSpaceOnUse" x1="67.491" y1="564.359" x2="67.881" y2="564.359" gradientTransform="matrix(0 -121.865 -121.865 0 68797.742 8310.488)"><stop offset="0" stop-color="#318ED5"></stop><stop offset="1" stop-color="#38A7E4"></stop></linearGradient><path fill="url(#dot-net-original-i)" d="M10.127 77.138c10.233-19.719 15.081-32.199 23.64-35.577-8.825 3.454-18.762 16.479-23.64 35.577"></path><path fill="#127BCA" d="M43.574 43.544c-.199.204-.389.417-.58.649.322.538.621 1.124.913 1.76.378-.29.756-.563 1.129-.832a15.351 15.351 0 00-1.462-1.577"></path><linearGradient id="dot-net-original-j" gradientUnits="userSpaceOnUse" x1="67.593" y1="564.41" x2="67.984" y2="564.41" gradientTransform="matrix(0 -118.46 -118.46 0 66884.703 8093.017)"><stop offset="0" stop-color="#05A1E6"></stop><stop offset="1" stop-color="#05A1E6" stop-opacity=".549"></stop></linearGradient><path fill="url(#dot-net-original-j)" d="M14.773 88.315l-.186.022h-.035l-.158.016h-.026l-.376.025h-.039c10.356-.29 15.091-5.475 17.44-12.997 1.785-5.701 3.252-10.505 4.537-14.535-4.338 6.106-8.696 13.384-13.077 21.539-2.112 3.93-5.325 5.572-8.08 5.922"></path><linearGradient id="dot-net-original-k" gradientUnits="userSpaceOnUse" x1="68.291" y1="564.525" x2="68.682" y2="564.525" gradientTransform="matrix(0 -100.1 -100.1 0 56536.551 6924.301)"><stop offset="0" stop-color="#1959A6"></stop><stop offset=".5" stop-color="#05A1E6"></stop><stop offset=".5" stop-color="#05A1E6"></stop><stop offset=".918" stop-color="#7EC5EA"></stop><stop offset="1" stop-color="#7EC5EA"></stop></linearGradient><path fill="url(#dot-net-original-k)" d="M14.773 88.311c2.755-.351 5.968-1.991 8.08-5.923 4.381-8.151 8.741-15.431 13.075-21.538 1.577-4.949 2.878-8.737 4.154-11.621-8.639 8.223-17.311 21.896-25.31 39.077"></path><path fill="#05A1E6" d="M10.127 77.139a388.004 388.004 0 01-6.063 11.266h3.904a95.502 95.502 0 012.158-11.264"></path><linearGradient id="dot-net-original-l" gradientUnits="userSpaceOnUse" x1="67.892" y1="563.82" x2="68.282" y2="563.82" gradientTransform="scale(-110.211 110.211) rotate(-80 -301.688 322.91)"><stop offset="0" stop-color="#165096"></stop><stop offset="1" stop-color="#0D82CA"></stop></linearGradient><path fill="url(#dot-net-original-l)" d="M37.073 40.709l-.083.016-.146.021-.086.015-.154.027-.066.016-.333.058h-.038l-.162.032-.081.022-.157.031-.074.018-.549.142-.063.018-.166.049-.075.021-.163.049-.06.016-.381.134-.173.06-.072.03-.161.06-.054.026c-8.558 3.377-13.406 15.857-23.639 35.576A94.655 94.655 0 007.979 88.41h.547l3.755-.016h1.723l.375-.025h.024l.158-.016h.037l.186-.022c8-17.182 16.672-30.854 25.31-39.077.95-2.152 1.887-3.796 2.911-5.04-.6-1.013-1.256-1.861-1.988-2.476l-.021-.016-.122-.059-.121-.061-.117-.057-.139-.058-.108-.047-.227-.095-.097-.036-.169-.068-.091-.03-.235-.081h-.019l-.272-.077-.061-.019-.229-.064-.053-.015a7.851 7.851 0 00-.569-.125l-.059-.016-.247-.04-.049-.015-.292-.039h-.051l-.226-.025-.358.033"></path><linearGradient id="dot-net-original-m" gradientUnits="userSpaceOnUse" x1="70.847" y1="566.882" x2="71.237" y2="566.882" gradientTransform="matrix(0 -56.721 -56.721 0 32252.127 4080.282)"><stop offset="0" stop-color="#05A1E6"></stop><stop offset=".874" stop-color="#0495D6"></stop><stop offset="1" stop-color="#0495D6"></stop></linearGradient><path fill="url(#dot-net-original-m)" d="M95.311 52.407c-1.97 6.307-3.563 11.51-4.952 15.791 5.403-7.435 10.725-16.787 15.792-27.579-5.913 1.857-9.065 6.107-10.84 11.788"></path><linearGradient id="dot-net-original-n" gradientUnits="userSpaceOnUse" x1="61.634" y1="562.213" x2="62.024" y2="562.213" gradientTransform="scale(-132.813 132.813) rotate(80 365.248 244.034)"><stop offset="0" stop-color="#38A7E4" stop-opacity=".329"></stop><stop offset=".962" stop-color="#0E88D3"></stop><stop offset=".962" stop-color="#0E88D3"></stop><stop offset="1" stop-color="#0E88D3"></stop></linearGradient><path fill="url(#dot-net-original-n)" d="M90.53 85.621c-.275.14-.552.273-.823.394 10.508-4.687 23.044-23.277 29.044-46.421h-1.216c-13.788 24.631-18.222 41.12-27.005 46.027"></path><path fill="#079AE1" d="M83.668 83.552c2.287-2.791 4.148-7.535 6.691-15.354-2.933 4.029-5.885 7.492-8.84 10.316l-.015.025c.645 1.931 1.352 3.636 2.158 5.012"></path><path fill="#1969BC" d="M83.668 83.552c-.778.95-1.603 1.673-2.519 2.209-.2.117-.404.227-.61.327a8.839 8.839 0 003.206 1.011l.524.046h.031l.252.016h.855l.097-.016.189-.016h.092l.205-.022h.017l.063-.015.219-.034h.064l.246-.041h.04l.491-.104c-1.357-.496-2.492-1.667-3.469-3.334"></path><path fill="#1E5CB3" d="M64.295 87.161c.982 0 1.976-.096 2.973-.288a18.309 18.309 0 002.773-.747c.771.376 1.579.656 2.435.831.664.135 1.354.205 2.077.205H64.295zM74.553 87.161c2.429 0 4.353-.288 5.986-1.073a8.84 8.84 0 003.206 1.012l.524.045h.031l.252.016h.302-10.301z"></path><path fill="#1D60B5" d="M84.854 87.161h.561l.097-.016.191-.016h.092l.204-.022h.017l.062-.016.219-.033.067-.015.247-.04h.039l.491-.104c.475.175.97.264 1.503.264l-3.788.016-.002-.018z"></path><path fill="#175FAB" d="M81.511 78.54v-.016a47.16 47.16 0 01-3.24 2.84 36.81 36.81 0 01-1.693 1.271c.476.568.959 1.1 1.468 1.585.772.749 1.597 1.38 2.498 1.867.205-.101.41-.211.609-.327.918-.536 1.741-1.26 2.52-2.209-.806-1.376-1.513-3.082-2.157-5.012"></path><linearGradient id="dot-net-original-o" gradientUnits="userSpaceOnUse" x1="61.149" y1="562.654" x2="61.539" y2="562.654" gradientTransform="matrix(0 123.742 123.742 0 -69523.625 -7527.189)"><stop offset="0" stop-color="#168CD4"></stop><stop offset=".5" stop-color="#1C87CC"></stop><stop offset="1" stop-color="#154B8D"></stop></linearGradient><path fill="url(#dot-net-original-o)" d="M113.685 39.594h-6.121l-.97.047-.451.966c-5.068 10.793-10.388 20.145-15.791 27.58-2.54 7.818-4.404 12.563-6.69 15.353.977 1.668 2.114 2.84 3.466 3.337l.106-.023h.022l.075-.016.17-.042.101-.029.151-.039.094-.027.226-.068.112-.038.126-.046.13-.041.106-.04.264-.093.073-.027.162-.063.068-.025.568-.243h.02c.271-.119.547-.254.821-.394 8.785-4.908 13.22-21.396 27.008-46.026h-3.851l.005-.003z"></path><path fill="#7DCBEC" d="M37.433 40.677l.063.016.16.017h.054l.292.038.049.016.246.041.062.015.567.126.052.016.228.064.063.019.271.077.021.016.237.081.09.029.17.069.096.034.226.094.11.047.136.059.12.057.119.062c.979.48 1.879 1.121 2.713 1.898.308-.323.628-.613.962-.874-1.823-1.293-3.89-2.03-6.271-2.03-.276 0-.552.016-.832.037"></path><path fill="#5EC5ED" d="M43.574 43.544c.511.475 1 1.005 1.462 1.577.448-.311.892-.611 1.337-.891a14.13 14.13 0 00-1.839-1.56c-.333.26-.652.552-.96.874"></path><g transform="matrix(5.048 0 0 -5.048 -9064.26 2270.61)"><linearGradient id="dot-net-original-p" gradientUnits="userSpaceOnUse" x1="1806.96" y1="336.158" x2="1807.35" y2="336.158" gradientTransform="scale(30.857 -30.857) rotate(22.527 1812.675 -4228.953)"><stop offset="0" stop-color="#97D6EE"></stop><stop offset=".703" stop-color="#55C1EA"></stop><stop offset="1" stop-color="#55C1EA"></stop></linearGradient><path fill="url(#dot-net-original-p)" d="M1802.977 441.733l.165.007c.472 0 .881-.146 1.242-.402.381.301.842.406 1.482.406h-3.099l.21-.011"></path></g><g transform="matrix(5.048 0 0 -5.048 -9064.26 2270.61)"><linearGradient id="dot-net-original-q" gradientUnits="userSpaceOnUse" x1="1808.848" y1="335.171" x2="1809.238" y2="335.171" gradientTransform="scale(24.717 -24.717) rotate(-24.385 124.122 4175.416)"><stop offset="0" stop-color="#7ACCEC"></stop><stop offset="1" stop-color="#3FB7ED"></stop></linearGradient><path fill="url(#dot-net-original-q)" d="M1805.866 441.744c-.64 0-1.1-.105-1.482-.406.126-.089.248-.193.364-.309.531.337 1.056.561 1.574.658.198.037.395.056.589.056h-1.045v.001z"></path></g><linearGradient id="dot-net-original-r" gradientUnits="userSpaceOnUse" x1="61.049" y1="562.706" x2="61.439" y2="562.706" gradientTransform="matrix(0 121.032 121.032 0 -68011.711 -7346.748)"><stop offset="0" stop-color="#1DA7E7"></stop><stop offset="1" stop-color="#37ABE7" stop-opacity="0"></stop></linearGradient><path fill="url(#dot-net-original-r)" d="M90.359 68.202c1.391-4.284 2.98-9.485 4.954-15.794 1.777-5.684 4.925-9.934 10.835-11.788l.456-.966c-9.636.577-14.14 5.479-16.405 12.738-3.964 12.673-6.365 20.888-8.677 26.123 2.952-2.823 5.904-6.288 8.837-10.313"></path>
+                                                                </svg>
+                                                            </Avatar>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary="Asp.Net" secondary={<LinearProgressWithLabel value={70} />} />
+                                                    </ListItem>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <Avatar>
+                                                                <svg viewBox="0 0 128 128">
+                                                                    <g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"></circle><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"></path></g>
+                                                                </svg>
+                                                            </Avatar>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary="ReactJS" secondary={<LinearProgressWithLabel value={60} />} />
+                                                    </ListItem>
+                                                </List>
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+                                </div>
+                                <div className="col-md-4">
+                                    <Card>
+                                        <CardActionArea>
+                                            <CardMedia
+                                                component="img"
+                                                alt="Backend Icon"
+                                                height="40"
+                                                image="../../Assets/Img/Backend_Icon.png"
+                                                title="Backend Icon">
+                                            </CardMedia>
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="div">
+                                                    Tools & Platforms
+                                                </Typography>
+                                                <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <Avatar>
+                                                                <svg viewBox="0 0 128 128">
+                                                                    <path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"></path>
+                                                                </svg>
+                                                            </Avatar>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary="Git" secondary={<LinearProgressWithLabel value={70} />} />
+                                                    </ListItem>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <Avatar>
+                                                                <svg viewBox="0 0 128 128">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#3A4D54" d="M73.8 50.8h11.3v11.5h5.7c2.6 0 5.3-.5 7.8-1.3 1.2-.4 2.6-1 3.8-1.7-1.6-2.1-2.4-4.7-2.6-7.3-.3-3.5.4-8.1 2.8-10.8l1.2-1.4 1.4 1.1c3.6 2.9 6.5 6.8 7.1 11.4 4.3-1.3 9.3-1 13.1 1.2l1.5.9-.8 1.6c-3.2 6.2-9.9 8.2-16.4 7.8-9.8 24.3-31 35.8-56.8 35.8-13.3 0-25.5-5-32.5-16.8l-.1-.2-1-2.1c-2.4-5.2-3.1-10.9-2.6-16.6l.2-1.7h9.6V50.8h11.3V39.6h22.5V28.3h13.5v22.5z"></path><path fill="#00AADA" d="M110.4 55.1c.8-5.9-3.6-10.5-6.4-12.7-3.1 3.6-3.6 13.2 1.3 17.2-2.8 2.4-8.5 4.7-14.5 4.7H18.6c-.6 6.2.5 11.9 3 16.8l.8 1.5c.5.9 1.1 1.7 1.7 2.6 3 .2 5.7.3 8.2.2 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5 1.1-8.3 1.3h-.6c-1.3.1-2.7.1-4.2.1-1.6 0-3.1 0-4.9-.1 6 6.8 15.4 10.8 27.2 10.8 25 0 46.2-11.1 55.5-35.9 6.7.7 13.1-1 16-6.7-4.5-2.7-10.5-1.8-13.9-.1z"></path><path fill="#28B8EB" d="M110.4 55.1c.8-5.9-3.6-10.5-6.4-12.7-3.1 3.6-3.6 13.2 1.3 17.2-2.8 2.4-8.5 4.7-14.5 4.7h-68c-.3 9.5 3.2 16.7 9.5 21 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.5 1.4l-.1-.1c8.5 4.4 20.8 4.3 35-1.1 15.8-6.1 30.6-17.7 40.9-30.9-.2.1-.4.1-.5.2z"></path><path fill="#028BB8" d="M18.7 71.8c.4 3.3 1.4 6.4 2.9 9.3l.8 1.5c.5.9 1.1 1.7 1.7 2.6 3 .2 5.7.3 8.2.2 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.5 1.4h-.4c-1.3.1-2.7.1-4.1.1-1.6 0-3.2 0-4.9-.1 6 6.8 15.5 10.8 27.3 10.8 21.4 0 40-8.1 50.8-26H18.7v-.1z"></path><path fill="#019BC6" d="M23.5 71.8c1.3 5.8 4.3 10.4 8.8 13.5 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.6 1.4 8.5 4.4 20.8 4.3 34.9-1.1 8.5-3.3 16.8-8.2 24.2-14.1H23.5z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#00ACD3" d="M28.4 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm3-12h9.8v9.8h-9.8v-9.8zm.9.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#23C2EE" d="M39.6 52.7h9.8v9.8h-9.8v-9.8zm.9.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#00ACD3" d="M50.9 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#23C2EE" d="M50.9 41.5h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm3.1 10.4H72v9.8h-9.8v-9.8zm.8.8h.8v8.1H63v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#00ACD3" d="M62.2 41.5H72v9.8h-9.8v-9.8zm.8.8h.8v8.1H63v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#23C2EE" d="M62.2 30.2H72V40h-9.8v-9.8zm.8.8h.8v8.1H63V31zm1.5 0h.8v8.1h-.8V31zm1.4 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#00ACD3" d="M73.5 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#D4EEF1" d="M48.8 78.3c1.5 0 2.7 1.2 2.7 2.7 0 1.5-1.2 2.7-2.7 2.7-1.5 0-2.7-1.2-2.7-2.7 0-1.5 1.2-2.7 2.7-2.7"></path><path fill-rule="evenodd" clip-rule="evenodd" fill="#3A4D54" d="M48.8 79.1c.2 0 .5 0 .7.1-.2.1-.4.4-.4.7 0 .4.4.8.8.8.3 0 .6-.2.7-.4.1.2.1.5.1.7 0 1.1-.9 1.9-1.9 1.9-1.1 0-1.9-.9-1.9-1.9 0-1 .8-1.9 1.9-1.9M1.1 72.8h125.4c-2.7-.7-8.6-1.6-7.7-5.2-5 5.7-16.9 4-20 1.2-3.4 4.9-23 3-24.3-.8-4.2 5-17.3 5-21.5 0-1.4 3.8-21 5.7-24.3.8-3 2.8-15 4.5-20-1.2 1.1 3.5-4.9 4.5-7.6 5.2"></path><path fill="#BFDBE0" d="M56 97.8c-6.7-3.2-10.3-7.5-12.4-12.2-2.5.7-5.5 1.2-8.9 1.4-1.3.1-2.7.1-4.1.1-1.7 0-3.4 0-5.2-.1 6 6 13.6 10.7 27.5 10.8H56z"></path><path fill="#D4EEF1" d="M46.1 89.9c-.9-1.3-1.8-2.8-2.5-4.3-2.5.7-5.5 1.2-8.9 1.4 2.3 1.2 5.7 2.4 11.4 2.9z"></path>
+                                                                </svg>
+                                                            </Avatar>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary="Docker" secondary={<LinearProgressWithLabel value={60} />} />
+                                                    </ListItem>
+                                                </List>
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+                                </div>
+                            </div>
+                        </div>
                     </section>
-                </div>
-            </main>
         </div>;
     }
 }
- 
+
 export default Skills;
